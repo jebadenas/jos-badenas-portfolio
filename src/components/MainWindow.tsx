@@ -25,9 +25,9 @@ const MainWindow = () => {
     <div className="absolute top-1/2 left-1/2 transform -translate-x-1/2 -translate-y-1/2 inline-flex flex-col border-4 border-[#0055EA] text-white rounded-t-lg">
       <div className="bg-[#0055EA] p-1">home</div>
 
-      <div className="flex flex-col items-center py-[100px] px-[130px] gap-[30px]">
-        <p className="text-black text-9xl ">hi! i&apos;m jos</p>
-        <h2 className="text-black text-3xl">
+      <div className="flex flex-col items-center py-[100px] px-[130px] gap-[10px]">
+        <p className="text-black text-9xl font-myFont ">hi! i&apos;m jos</p>
+        <h2 className="text-[#4C3535] text-3xl font-main">
           cs student, aspiring software engineer
         </h2>
 
