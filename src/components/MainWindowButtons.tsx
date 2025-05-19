@@ -16,7 +16,7 @@ const MainWindowButtons = ({ imageSrc, label }: Props) => (
         height={100}
         className="object-contain"
       ></Image>
-      <p className="text-xl text-black">{label}</p>
+      <p className="text-xl text-[#4C3535] font-main">{label}</p>
     </button>
   </div>
 );

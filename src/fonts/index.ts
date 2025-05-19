@@ -1,4 +1,4 @@
 import { myFont } from "./MyFont";
-import { dmSans } from "./Google";
+import { dmSansFont } from "./Google";
 
-export { myFont, dmSans };
+export { myFont, dmSansFont };
