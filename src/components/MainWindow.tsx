@@ -22,11 +22,11 @@ const buttons = [
 
 const MainWindow = () => {
   return (
-    <div className="inline-flex flex-col border-4 border-blue-700 text-white rounded-t-lg">
+    <div className="absolute top-1/2 left-1/2 transform -translate-x-1/2 -translate-y-1/2 inline-flex flex-col border-4 border-blue-700 text-white rounded-t-lg">
       <div className="bg-blue-700 p-1">home</div>
 
       <div className="flex flex-col items-center py-[100px] px-[130px] gap-[30px]">
-        <p className="text-black text-9xl ">hi! i'm jos</p>
+        <p className="text-black text-9xl ">I&apos;m Jos</p>
         <h2 className="text-black text-3xl">
           cs student, aspiring software engineer
         </h2>
