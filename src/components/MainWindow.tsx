@@ -26,7 +26,7 @@ const MainWindow = () => {
       <div className="bg-blue-700 p-1">home</div>
 
       <div className="flex flex-col items-center py-[100px] px-[130px] gap-[30px]">
-        <p className="text-black text-9xl ">I&apos;m Jos</p>
+        <p className="text-black text-9xl ">hi! i&apos;m jos</p>
         <h2 className="text-black text-3xl">
           cs student, aspiring software engineer
         </h2>
