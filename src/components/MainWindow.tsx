@@ -25,7 +25,7 @@ const MainWindow = () => {
     <div className="inline-flex flex-col border-4 border-blue-700 text-white rounded-t-lg">
       <div className="bg-blue-700 p-1">home</div>
 
-      <div className="flex flex-col items-center py-[150px] px-[130px] gap-[30px]">
+      <div className="flex flex-col items-center py-[100px] px-[130px] gap-[30px]">
         <p className="text-black text-9xl ">hi! i'm jos</p>
         <h2 className="text-black text-3xl">
           cs student, aspiring software engineer
