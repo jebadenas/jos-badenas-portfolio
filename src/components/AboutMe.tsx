@@ -11,12 +11,14 @@ const AboutMe = () => {
         </button>
       </div>
       <div className="flex flex-row p-6 gap-[20px] border-b border-[#D9D9D9] ">
-        <Image
-          src="/photoWithGaben.jpg"
-          alt="Jos Badenas and Gabe Newell"
-          width={200}
-          height={200}
-        ></Image>
+        <div className="relative rounded-full overflow-hidden w-[150px] aspect-square">
+          <Image
+            src="/photoWithGaben.jpg"
+            alt="Jos Badenas and Gabe Newell"
+            fill
+            className="object-cover"
+          ></Image>
+        </div>
         <div className="flex flex-col p-4">
           <h2 className="font-myFont text-7xl">jos badenas</h2>
           <div>
