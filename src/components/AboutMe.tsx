@@ -23,7 +23,7 @@ const AboutMe = () => {
           <h2 className="font-myFont text-7xl">jos badenas</h2>
           <div>
             <p>software engineer based in auckland, nz 🇳🇿</p>
-            <p>cs and finance student at the university of auckland</p>
+            <p>cs and finance student at the university of auckland.</p>
           </div>
         </div>
       </div>
