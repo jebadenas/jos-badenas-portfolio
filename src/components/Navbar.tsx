@@ -1,11 +1,17 @@
+"use client";
 import React from "react";
+import { motion } from "motion/react";
 
 const Navbar = () => {
   return (
     <div className="bg-[#0055EA] fixed bottom-0 w-full text-white">
-      <button className="bg-[#B8D380] bold italic text-white text-2xl px-6 py-2 rounded-r-2xl hover:bg-[#C4DA97] font-main font-bold">
+      <motion.button
+        whileHover={{ backgroundColor: "#C4DA97" }}
+        transition={{ duration: 0.2 }}
+        className="bg-[#B8D380] bold italic text-white text-2xl px-6 py-2 rounded-r-2xl font-main font-bold"
+      >
         jos badenas
-      </button>
+      </motion.button>
     </div>
   );
 };
