@@ -28,10 +28,10 @@ const AboutMe = () => {
         </div>
       </div>
       <div className="flex flex-col p-6 gap-[10px]">
-        <p>kia ora! i'm jos</p>
+        <p>{`kia ora! i'm jos`}</p>
         <p>
-          that's me in the picture on the left next to Gabe Newell, co-founder
-          of Steam and Valve
+          {`that's me in the picture on the left next to Gabe Newell (co-founder
+          of Steam and Valve)`}
         </p>
         <div>
           <p>i am currently:</p>
@@ -50,7 +50,7 @@ const AboutMe = () => {
               play guitar, learning one by one, songs from my favourite movies
             </li>
             <li>progressively overloading 🏋️‍♂️</li>
-            <li>go on long walks on the beach (not a joke)</li>
+            <li>{`go on long walks on the beach (not a joke)`}</li>
           </ul>
         </div>
       </div>
