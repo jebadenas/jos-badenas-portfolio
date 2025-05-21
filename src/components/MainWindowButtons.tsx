@@ -9,7 +9,7 @@ type Props = {
 
 const MainWindowButtons = ({ imageSrc, label }: Props) => (
   <div>
-    <motion.button whileHover={{ scale: 1.1 }} whileTap={{ scale: 0.9 }}>
+    <motion.button whileHover={{ scale: 1.05 }} whileTap={{ scale: 0.95 }}>
       <Image
         src={imageSrc}
         alt={label}
