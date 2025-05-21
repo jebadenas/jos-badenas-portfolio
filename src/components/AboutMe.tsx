@@ -3,13 +3,7 @@ import Image from "next/image";
 
 const AboutMe = () => {
   return (
-    <div className="inline-flex flex-col border-4 border-[#0055EA] rounded-t-lg ">
-      <div className="bg-[#0055EA] p-1 flex flex-row justify-between items-center">
-        <p className="text-white font-main">about me</p>
-        <button className="bg-[#DF4A24] text-white py-1 px-2 rounded-md">
-          X
-        </button>
-      </div>
+    <>
       <div className="flex flex-row p-6 gap-[20px] border-b border-[#D9D9D9] ">
         <div className="relative rounded-full overflow-hidden w-[150px] aspect-square">
           <Image
@@ -54,7 +48,7 @@ const AboutMe = () => {
           </ul>
         </div>
       </div>
-    </div>
+    </>
   );
 };
 
