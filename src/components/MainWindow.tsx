@@ -31,11 +31,11 @@ const MainWindow = ({
 
       <div className="flex flex-col items-center py-[100px] px-[110px] gap-[20px] bg-white">
         <div className="flex flex-col items-center justify-content">
-          <p className="text-black text-8xl xl:text-9xl font-myFont mb-[-20px]">
+          <p className="text-black text-7xl xl:text-8xl font-myFont mb-[-20px]">
             hi! i&apos;m jos
           </p>
-          <h2 className="text-[#4C3535] text-xl  md:text-2xl lg:text-3xl font-main text-center">
-            cs student, aspiring software engineer
+          <h2 className="text-[#4C3535] text-xl  lg:text-2xl font-main text-center">
+            cs student, future software engineer
           </h2>
         </div>
 
