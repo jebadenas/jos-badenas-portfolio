@@ -9,6 +9,7 @@ type WindowProps = {
   children?: ReactNode;
   zIndex?: number;
   onFocus?: () => void;
+  onClose?: () => void;
 };
 
 const Window = ({
@@ -16,6 +17,7 @@ const Window = ({
   children,
   zIndex = 1,
   onFocus,
+  onClose,
 }: WindowProps) => {
   const dragControls = useDragControls();
 
@@ -37,7 +39,12 @@ const Window = ({
         }}
       >
         <p className="text-white font-main">{name}</p>
-        <button className="bg-[#DF4A24] text-white py-1 px-2 rounded-md cursor-pointer">
+        <button
+          className="bg-[#DF4A24] text-white py-1 px-2 rounded-md cursor-pointer"
+          onClick={(e) => {
+            onClose?.();
+          }}
+        >
           X
         </button>
       </div>

@@ -5,9 +5,10 @@ import { motion } from "motion/react";
 type Props = {
   imageSrc: string;
   label: string;
+  onClick: () => void;
 };
 
-const MainWindowButtons = ({ imageSrc, label }: Props) => (
+const MainWindowButtons = ({ imageSrc, label, onClick }: Props) => (
   <div>
     <motion.button whileHover={{ scale: 1.1 }} whileTap={{ scale: 0.9 }}>
       <Image
@@ -16,6 +17,7 @@ const MainWindowButtons = ({ imageSrc, label }: Props) => (
         width={100}
         height={100}
         className="object-contain"
+        onClick={onClick}
       ></Image>
       <p className="text-xl text-[#4C3535] font-main">{label}</p>
     </motion.button>

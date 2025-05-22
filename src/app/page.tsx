@@ -10,9 +10,9 @@ export default function Home() {
       className={`select-none relative min-h-screen ${dmSansFont.variable} ${myFont.variable} bg-[#A7D5FF]`}
     >
       <span>{`note jos badenas is still working on this project so it is super broken :d`}</span>
-      <WindowMaster />
+
       <Background />
-      <MainWindow />
+      <WindowMaster />
       <Navbar />
     </div>
   );

@@ -8,7 +8,7 @@ import MainWindow from "./MainWindow";
 const WindowMaster = () => {
   const [topZIndex, setTopZIndex] = useState(1); // the next z-index to assign (increments)
   const [zIndices, setZIndices] = useState<{ [key: string]: number }>({
-    "0": 1,
+    "0": 0,
     "1": 0,
     "2": 0,
     "3": 0,
@@ -19,32 +19,66 @@ const WindowMaster = () => {
     setTopZIndex(nextZ);
     setZIndices((prev) => ({ ...prev, [id]: nextZ }));
   };
+  const [openWindows, setOpenWindows] = useState<{ [key: string]: boolean }>({
+    about: false,
+    journal: false,
+    projects: false,
+    contact: false,
+  });
+
+  const closeWindow = (id: string) => {
+    setOpenWindows((prev) => ({ ...prev, [id]: false }));
+  };
+
+  const openWindow = (id: string) => {
+    setOpenWindows((prev) => ({ ...prev, [id]: true }));
+    bringToFront(id);
+  };
 
   return (
-    <div className="relative">
-      <Window
-        name="about me"
-        zIndex={zIndices["0"]}
-        onFocus={() => bringToFront("0")}
-      >
-        <AboutMe />
-      </Window>
-      <Window
-        name="journal"
-        zIndex={zIndices["1"]}
-        onFocus={() => bringToFront("1")}
+    <>
+      <MainWindow
+        onButtonClick={(label: string) =>
+          openWindow(label.toLowerCase().replace(" ", ""))
+        }
       />
-      <Window
-        name="projects"
-        zIndex={zIndices["2"]}
-        onFocus={() => bringToFront("2")}
-      />
-      <Window
-        name="contact"
-        zIndex={zIndices["3"]}
-        onFocus={() => bringToFront("3")}
-      />
-    </div>
+      <div className="relative">
+        {openWindows.about && (
+          <Window
+            name="about me"
+            zIndex={zIndices["0"]}
+            onFocus={() => bringToFront("0")}
+            onClose={() => closeWindow("about")}
+          >
+            <AboutMe />
+          </Window>
+        )}
+        {openWindows.journal && (
+          <Window
+            name="journal"
+            zIndex={zIndices["1"]}
+            onFocus={() => bringToFront("1")}
+            onClose={() => closeWindow("journal")}
+          />
+        )}
+        {openWindows.projects && (
+          <Window
+            name="projects"
+            zIndex={zIndices["2"]}
+            onFocus={() => bringToFront("2")}
+            onClose={() => closeWindow("projects")}
+          />
+        )}
+        {openWindows.contact && (
+          <Window
+            name="contact"
+            zIndex={zIndices["3"]}
+            onFocus={() => bringToFront("3")}
+            onClose={() => closeWindow("contact")}
+          />
+        )}
+      </div>
+    </>
   );
 };
 

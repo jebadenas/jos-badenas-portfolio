@@ -4,7 +4,7 @@ import MainWindowButtons from "./MainWindowButtons";
 const buttons = [
   {
     imageSrc: "icons/personIcon.svg",
-    label: "about me",
+    label: "about",
   },
   {
     imageSrc: "icons/journalIcon.svg",
@@ -20,7 +20,11 @@ const buttons = [
   },
 ];
 
-const MainWindow = () => {
+const MainWindow = ({
+  onButtonClick,
+}: {
+  onButtonClick: (label: string) => void;
+}) => {
   return (
     <div className="absolute top-1/2 left-1/2 transform -translate-x-1/2 -translate-y-1/2 inline-flex flex-col border-4 border-[#0055EA] text-white rounded-t-lg">
       <div className="bg-[#0055EA] p-1">home</div>
@@ -41,6 +45,7 @@ const MainWindow = () => {
               key={btn.label}
               imageSrc={btn.imageSrc}
               label={btn.label}
+              onClick={() => onButtonClick(btn.label)}
             />
           ))}
         </div>
