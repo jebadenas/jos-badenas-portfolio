@@ -9,7 +9,7 @@ type Props = {
 };
 
 const MainWindowButtons = ({ imageSrc, label, onClick }: Props) => (
-  <div>
+  <div className="flex flex-col items-center justify-center w-[100px]">
     <motion.button
       whileHover={{ scale: 1.1 }}
       whileTap={{ scale: 0.9 }}
