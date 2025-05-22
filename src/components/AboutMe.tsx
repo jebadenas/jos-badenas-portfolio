@@ -4,7 +4,7 @@ import Image from "next/image";
 const AboutMe = () => {
   return (
     <>
-      <div className="flex flex-row p-6 gap-[20px] border-b border-[#D9D9D9] ">
+      <div className="flex flex-row p-6 gap-[20px] border-b border-[#D9D9D9]">
         <div className="relative rounded-full overflow-hidden w-[150px] aspect-square">
           <Image
             src="/photoWithGaben.jpg"

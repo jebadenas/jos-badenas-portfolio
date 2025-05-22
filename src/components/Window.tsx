@@ -39,7 +39,7 @@ const Window = ({
         top: initialPosition?.top ?? 100,
         left: initialPosition?.left ?? 100,
       }} // make it absolutely positioned
-      className="inline-flex flex-col border-4 border-[#0055EA] rounded-t-lg bg-white shadow-md"
+      className="inline-flex flex-col border-4 border-[#0055EA] rounded-t-lg bg-white shadow-md text-black"
       onPointerDown={onFocus}
     >
       <div
