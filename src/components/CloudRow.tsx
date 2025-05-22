@@ -19,7 +19,7 @@ const CloudRow = ({
 }: CloudProps) => {
   const duplicatedSlides = [...clouds, ...clouds];
 
-  const animationDirection = leftToRight ? ["-50%", "0%"] : ["0%", "-50%"]; //this dictates direction of cloiuds
+  const animationDirection = leftToRight ? ["-50%", "0%"] : ["0%", "-50%"]; //this dictates direction of clouds
 
   return (
     <div className="relative w-full overflow-hidden">

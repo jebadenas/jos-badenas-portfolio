@@ -5,11 +5,16 @@ import { motion } from "motion/react";
 type Props = {
   imageSrc: string;
   label: string;
+  onClick: () => void;
 };
 
-const MainWindowButtons = ({ imageSrc, label }: Props) => (
+const MainWindowButtons = ({ imageSrc, label, onClick }: Props) => (
   <div>
-    <motion.button whileHover={{ scale: 1.1 }} whileTap={{ scale: 0.9 }}>
+    <motion.button
+      whileHover={{ scale: 1.1 }}
+      whileTap={{ scale: 0.9 }}
+      onClick={onClick}
+    >
       <Image
         src={imageSrc}
         alt={label}
