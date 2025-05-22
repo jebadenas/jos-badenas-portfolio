@@ -1,14 +1,22 @@
+// Window.tsx
 "use client";
 import React, { ReactNode } from "react";
 import Image from "next/image";
-import { motion, useDragControls } from "motion/react";
+import { motion, useDragControls } from "framer-motion";
 
 type WindowProps = {
   name: string;
   children?: ReactNode;
+  zIndex?: number;
+  onFocus?: () => void;
 };
 
-const Window = ({ name = "Window", children }: WindowProps) => {
+const Window = ({
+  name = "Window",
+  children,
+  zIndex = 1,
+  onFocus,
+}: WindowProps) => {
   const dragControls = useDragControls();
 
   return (
@@ -17,17 +25,23 @@ const Window = ({ name = "Window", children }: WindowProps) => {
       dragListener={false}
       dragTransition={{ power: 0 }}
       drag
-      className="inline-flex flex-col border-4 border-[#0055EA] rounded-t-lg bg-white"
+      style={{ zIndex, position: "absolute" }} // make it absolutely positioned
+      className="inline-flex flex-col border-4 border-[#0055EA] rounded-t-lg bg-white shadow-md"
+      onPointerDown={onFocus}
     >
       <div
         className="bg-[#0055EA] p-1 flex flex-row justify-between items-center"
-        onPointerDown={(e) => dragControls.start(e)}
+        onPointerDown={(e) => {
+          dragControls.start(e);
+          onFocus?.();
+        }}
       >
         <p className="text-white font-main">{name}</p>
-        <button className="bg-[#DF4A24] text-white py-1 px-2 rounded-md">
+        <button className="bg-[#DF4A24] text-white py-1 px-2 rounded-md cursor-pointer">
           X
         </button>
       </div>
+
       {children ?? (
         <div className="flex flex-col justify-center items-center gap-10 p-5">
           OH NO!!!!!!! i am currently working on this part of the website please
@@ -37,7 +51,7 @@ const Window = ({ name = "Window", children }: WindowProps) => {
             width={300}
             height={300}
             alt={"shark in nike shoes on the beach"}
-          ></Image>
+          />
         </div>
       )}
     </motion.div>
