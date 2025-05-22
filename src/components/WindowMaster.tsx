@@ -1,6 +1,6 @@
 // WindowMaster.tsx
 "use client";
-import React, { useRef, useState } from "react";
+import React, { useState } from "react";
 import Window from "./Window";
 import AboutMe from "./AboutMe";
 import MainWindow from "./MainWindow";
@@ -49,6 +49,7 @@ const WindowMaster = () => {
             zIndex={zIndices["0"]}
             onFocus={() => bringToFront("0")}
             onClose={() => closeWindow("about")}
+            initialPosition={{ top: 100, left: 100 }}
           >
             <AboutMe />
           </Window>
@@ -59,6 +60,7 @@ const WindowMaster = () => {
             zIndex={zIndices["1"]}
             onFocus={() => bringToFront("1")}
             onClose={() => closeWindow("journal")}
+            initialPosition={{ top: 200, left: 200 }}
           />
         )}
         {openWindows.projects && (
@@ -67,6 +69,7 @@ const WindowMaster = () => {
             zIndex={zIndices["2"]}
             onFocus={() => bringToFront("2")}
             onClose={() => closeWindow("projects")}
+            initialPosition={{ top: 150, left: 500 }}
           />
         )}
         {openWindows.contact && (
@@ -75,6 +78,7 @@ const WindowMaster = () => {
             zIndex={zIndices["3"]}
             onFocus={() => bringToFront("3")}
             onClose={() => closeWindow("contact")}
+            initialPosition={{ top: 250, left: 200 }}
           />
         )}
       </div>

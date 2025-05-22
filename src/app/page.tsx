@@ -1,5 +1,4 @@
 import Background from "@/components/Background";
-import MainWindow from "@/components/MainWindow";
 import Navbar from "@/components/Navbar";
 import WindowMaster from "@/components/WindowMaster";
 import { dmSansFont, myFont } from "@/fonts";
