@@ -1,6 +1,6 @@
 // Window.tsx
 "use client";
-import React, { ReactNode } from "react";
+import React, { ReactNode, useEffect } from "react";
 import Image from "next/image";
 import { motion, useDragControls } from "framer-motion";
 
@@ -10,6 +10,7 @@ type WindowProps = {
   zIndex?: number;
   onFocus?: () => void;
   onClose?: () => void;
+  initialPosition?: { top: number; left: number };
 };
 
 const Window = ({
@@ -18,8 +19,13 @@ const Window = ({
   zIndex = 1,
   onFocus,
   onClose,
+  initialPosition,
 }: WindowProps) => {
   const dragControls = useDragControls();
+
+  useEffect(() => {
+    onFocus?.(); // Automatically bring to front when mounted
+  }, []);
 
   return (
     <motion.div
@@ -27,7 +33,12 @@ const Window = ({
       dragListener={false}
       dragTransition={{ power: 0 }}
       drag
-      style={{ zIndex, position: "absolute" }} // make it absolutely positioned
+      style={{
+        zIndex,
+        position: "absolute",
+        top: initialPosition?.top ?? 100,
+        left: initialPosition?.left ?? 100,
+      }} // make it absolutely positioned
       className="inline-flex flex-col border-4 border-[#0055EA] rounded-t-lg bg-white shadow-md"
       onPointerDown={onFocus}
     >
@@ -42,6 +53,7 @@ const Window = ({
         <button
           className="bg-[#DF4A24] text-white py-1 px-2 rounded-md cursor-pointer"
           onClick={(e) => {
+            e.stopPropagation();
             onClose?.();
           }}
         >
