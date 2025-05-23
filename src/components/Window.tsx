@@ -3,6 +3,7 @@
 import React, { ReactNode, useEffect } from "react";
 import Image from "next/image";
 import { motion, useDragControls } from "framer-motion";
+import useSound from "use-sound";
 
 type WindowProps = {
   name: string;
@@ -22,6 +23,7 @@ const Window = ({
   initialPosition,
 }: WindowProps) => {
   const dragControls = useDragControls();
+  const [play] = useSound("/sounds/good.mp3");
 
   useEffect(() => {
     onFocus?.(); // Automatically bring to front when mounted
@@ -55,6 +57,7 @@ const Window = ({
           onClick={(e) => {
             e.stopPropagation();
             onClose?.();
+            play();
           }}
         >
           X
