@@ -14,7 +14,7 @@ const clouds2 = [
 
 const Background = () => {
   return (
-    <div className="flex flex-col h-screen absolute inset-0 pointer-events-none">
+    <div className="flex flex-col h-screen absolute inset-0 pointer-events-none -z-10 bg-[#A7D5FF]">
       <div className="flex flex-col flex-grow gap-30">
         <CloudRow clouds={clouds1} leftToRight={false} />
         <CloudRow clouds={clouds2} leftToRight={true} />
