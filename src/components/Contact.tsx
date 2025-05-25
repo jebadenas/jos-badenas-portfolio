@@ -99,8 +99,9 @@ const Contact = () => {
         </div>
       </form>
       <div className="absolute bottom-20 left-0 w-full rounded border border-red-300 bg-red-100 p-2 text-m text-yellow-800 shadow z-10 font-main">
-        <strong>heads up!</strong> sorry — the email service isn't working right
-        now. jos is fixing it! 😅 in the meantime, contact me at{" "}
+        <strong>heads up!</strong>{" "}
+        {`sorry — the email service isn't working right
+        now. jos is fixing it! 😅 in the meantime, contact me at`}{" "}
         <a href="mailto:jebadenas@gmail.com" className="underline">
           jebadenas@gmail.com
         </a>

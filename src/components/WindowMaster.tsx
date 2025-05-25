@@ -4,6 +4,7 @@ import React, { useState } from "react";
 import Window from "./Window";
 import AboutMe from "./AboutMe";
 import MainWindow from "./MainWindow";
+import Contact from "./Contact";
 
 const WindowMaster = () => {
   const [topZIndex, setTopZIndex] = useState(1); // the next z-index to assign (increments)
@@ -79,7 +80,9 @@ const WindowMaster = () => {
             onFocus={() => bringToFront("3")}
             onClose={() => closeWindow("contact")}
             initialPosition={{ top: 250, left: 200 }}
-          />
+          >
+            <Contact />
+          </Window>
         )}
       </div>
     </>
