@@ -23,7 +23,7 @@ const Window = ({
   initialPosition,
 }: WindowProps) => {
   const dragControls = useDragControls();
-  const [play] = useSound("/sounds/good.mp3");
+  const [play] = useSound("/sounds/good.mp3", { volume: 0 });
 
   useEffect(() => {
     onFocus?.(); // Automatically bring to front when mounted

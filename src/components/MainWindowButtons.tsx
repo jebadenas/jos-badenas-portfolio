@@ -11,7 +11,7 @@ type Props = {
 };
 
 const MainWindowButtons = ({ imageSrc, label, onClick }: Props) => {
-  const [play] = useSound("/sounds/pop.mp3");
+  const [play] = useSound("/sounds/pop.mp3", { volume: 0 });
 
   return (
     <div className="flex flex-col items-center justify-center w-[100px]">
