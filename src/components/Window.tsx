@@ -26,7 +26,7 @@ const Window = ({
   const [play] = useSound("/sounds/good.mp3", { volume: 0 });
 
   useEffect(() => {
-    onFocus?.(); // Automatically bring to front when mounted
+    onFocus?.();
   }, []);
 
   return (
