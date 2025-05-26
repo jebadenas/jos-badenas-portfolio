@@ -13,8 +13,8 @@ const AboutMe = () => {
             className="object-cover"
           ></Image>
         </div>
-        <div className="flex flex-col p-4">
-          <h2 className="font-myFont text-7xl">jos badenas</h2>
+        <div className="flex flex-col p-4 gap-2">
+          <h2 className="font-main text-4xl">jos badenas</h2>
           <div>
             <p>software engineer based in auckland, nz 🇳🇿</p>
             <p>cs and finance student at the university of auckland.</p>
