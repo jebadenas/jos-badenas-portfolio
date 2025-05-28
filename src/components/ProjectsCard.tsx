@@ -11,6 +11,7 @@ const ProjectsCard = () => {
         alt="painted flower vase"
         width={280}
         height={190}
+        className="rounded"
       ></Image>
       <div className="flex flex-col gap-4">
         <h2 className="font-main text-3xl">project name</h2>
@@ -26,7 +27,13 @@ const ProjectsCard = () => {
           </p>
         </div>
         <div className="flex flex-row justify-center">
-          <motion.button className="border w-[100px]">link</motion.button>
+          <motion.div
+            whileTap={{ scale: 0.95 }}
+            whileHover={{ scale: 1.02 }}
+            className="flex border w-[100px] cursor-pointer text-sm justify-center"
+          >
+            <a href="">link</a>
+          </motion.div>
         </div>
       </div>
     </div>
