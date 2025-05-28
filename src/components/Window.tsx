@@ -41,7 +41,7 @@ const Window = ({
         top: initialPosition?.top ?? 100,
         left: initialPosition?.left ?? 100,
       }} // make it absolutely positioned
-      className="inline-flex flex-col border-4 border-[#0055EA] rounded-t-lg bg-white shadow-md text-black"
+      className="inline-flex flex-col border-4 border-[#0055EA] rounded-t-lg bg-white shadow-md text-black max-h-[600px]"
       onPointerDown={onFocus}
     >
       <div
@@ -64,18 +64,20 @@ const Window = ({
         </button>
       </div>
 
-      {children ?? (
-        <div className="flex flex-col justify-center items-center gap-10 p-5">
-          OH NO!!!!!!! i am currently working on this part of the website please
-          come back at a later time!!!!
-          <Image
-            src={"/tralalelo.webp"}
-            width={300}
-            height={300}
-            alt={"shark in nike shoes on the beach"}
-          />
-        </div>
-      )}
+      <div className="flex-1 overflow-y-auto">
+        {children ?? (
+          <div className="flex flex-col justify-center items-center gap-10 p-5">
+            OH NO!!!!!!! i am currently working on this part of the website
+            please come back at a later time!!!!
+            <Image
+              src={"/tralalelo.webp"}
+              width={300}
+              height={300}
+              alt={"shark in nike shoes on the beach"}
+            />
+          </div>
+        )}
+      </div>
     </motion.div>
   );
 };
