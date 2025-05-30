@@ -70,6 +70,7 @@ const Contact = () => {
             alt="happy cartoon character receiving mail"
             height={210}
             width={180}
+            loading="eager"
           />
         </div>
         <textarea
