@@ -30,6 +30,7 @@ const ProjectsCard = ({
         width={280}
         height={190}
         className="rounded"
+        loading="eager"
       ></Image>
       <div className="flex flex-col gap-4">
         <h2 className="font-main text-3xl">{heading}</h2>

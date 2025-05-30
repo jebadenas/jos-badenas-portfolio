@@ -71,7 +71,7 @@ const WindowMaster = () => {
             zIndex={zIndices["2"]}
             onFocus={() => bringToFront("2")}
             onClose={() => closeWindow("projects")}
-            initialPosition={{ top: 150, left: 500 }}
+            initialPosition={{ top: 150, left: 300 }}
           >
             <Projects />
           </Window>
@@ -82,7 +82,7 @@ const WindowMaster = () => {
             zIndex={zIndices["3"]}
             onFocus={() => bringToFront("3")}
             onClose={() => closeWindow("contact")}
-            initialPosition={{ top: 250, left: 200 }}
+            initialPosition={{ top: 250, left: 800 }}
           >
             <Contact />
           </Window>

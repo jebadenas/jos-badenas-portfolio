@@ -11,6 +11,7 @@ const AboutMe = () => {
             alt="Jos Badenas and Gabe Newell"
             fill
             className="object-cover"
+            loading="eager"
           ></Image>
         </div>
         <div className="flex flex-col p-4 gap-2">
