@@ -5,6 +5,7 @@ import Window from "./Window";
 import AboutMe from "./AboutMe";
 import MainWindow from "./MainWindow";
 import Contact from "./Contact";
+import Projects from "./Projects";
 
 const WindowMaster = () => {
   const [topZIndex, setTopZIndex] = useState(1); // the next z-index to assign (increments)
@@ -71,7 +72,9 @@ const WindowMaster = () => {
             onFocus={() => bringToFront("2")}
             onClose={() => closeWindow("projects")}
             initialPosition={{ top: 150, left: 500 }}
-          />
+          >
+            <Projects />
+          </Window>
         )}
         {openWindows.contact && (
           <Window
