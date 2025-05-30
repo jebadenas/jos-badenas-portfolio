@@ -33,7 +33,7 @@ const ProjectsCard = ({
       ></Image>
       <div className="flex flex-col gap-4">
         <h2 className="font-main text-3xl">{heading}</h2>
-        <div>
+        <div className="flex flex-col gap-2">
           <p>{description1}</p>
           <p>{description2}</p>
         </div>
@@ -41,9 +41,15 @@ const ProjectsCard = ({
           <motion.div
             whileTap={{ scale: 0.95 }}
             whileHover={{ scale: 1.02 }}
-            className="flex border w-[100px] cursor-pointer text-sm justify-center"
+            className="flex border px-5 py-1 cursor-pointer text-sm justify-center"
           >
-            {linkName ? <a href={linkSrc}>{linkName}</a> : <p>link</p>}
+            {linkName ? (
+              <a href={linkSrc} target="_blank">
+                {linkName}
+              </a>
+            ) : (
+              <p>link</p>
+            )}
           </motion.div>
         </div>
       </div>
